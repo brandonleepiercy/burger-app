@@ -8,13 +8,22 @@ var orm = {
             cb(result);
         });
     },
-    insertOne: function(value) {
+    insertOne: function(value, cb) {
         var queryString = "INSERT INTO burgers (burger_name) VALUES ('?')";
         connection.query(queryString, value, function(err,result) {
             if (err) throw err;
             console.log(Value + " added successfully");
-            console.log(result);
+            cb(result);
         });
     },
-    updateOne: function()
-}
+    updateOne: function(condition, cb) {
+        var queryString = "UPDATE burgers SET devoured = true WHERE ?";
+        connection.query(queryString, condition, function(err,result) {
+            if (err) throw err;
+            console.log("Burger "+condition+" set to devoured.");
+            cb(result);
+        });
+    }
+};
+
+module.exports = orm;
