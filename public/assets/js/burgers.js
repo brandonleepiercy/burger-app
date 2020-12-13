@@ -11,7 +11,7 @@ $(function() {
                 location.reload();
             }
         ).catch(err => {if (err) throw err});
-    });
+    })
 
     $(".burg-form").on("submit", function(event) {
         event.preventDefault();
@@ -29,5 +29,5 @@ $(function() {
                 location.reload();
             }
         ).catch(err => {if (err) throw err});
-    });
+    })
 });
