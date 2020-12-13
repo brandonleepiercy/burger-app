@@ -11,7 +11,11 @@ var burger = {
             cb(res);
         })
     },
-    update: function(condition, cb) {
-        orm.update("burgers")
+    updateOne: function(condition, cb) {
+        orm.updateOne(condition, function(res) {
+            cb(res);
+        }) 
     }
 };
+
+module.exports = burger;
