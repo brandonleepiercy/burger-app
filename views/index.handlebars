@@ -3,9 +3,9 @@
         <h2>Soon To Be Devoured Burgers!</h2>
         <ul>
             {{#each burgers}}
-                {{#if devoured}}
-                    {{> burger devoured=true}}
-                {{/if}}
+                {{#unless devoured}}
+                    {{>burger}}
+                {{/unless}}
             {{/each}}
         </ul>
     </div>
@@ -13,9 +13,9 @@
         <h2>100% Devoured Burgers!</h2>
         <ul>
             {{#each burgers}}
-                {{#unless devoured}}
-                    {{> burger devoured=false}}
-                {{/unless}}
+                {{#if devoured}}
+                    {{>burger}}
+                {{/if}}
             {{/each}}
         </ul>
     </div>
