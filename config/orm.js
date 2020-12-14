@@ -9,10 +9,10 @@ var orm = {
         });
     },
     insertOne: function(value, cb) {
-        var queryString = "INSERT INTO burgers (burger_name) VALUES ('?')";
+        var queryString = "INSERT INTO burgers (burger_name) VALUES (?)";
         connection.query(queryString, value, function(err,result) {
             if (err) throw err;
-            console.log(Value + " added successfully");
+            console.log(value + " added successfully");
             cb(result);
         });
     },

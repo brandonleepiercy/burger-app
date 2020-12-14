@@ -19,9 +19,11 @@ router.post("/api/burgers", function(req,res) {
 });
 
 router.put("/api/burgers/:id", function(req, res) {
-    var condition = "id = " + req.params.id;
+    const { id } = req.params
+    const condition = req.params.id
+    // var condition = "id = " + req.params.id;
     console.log("condition ", condition);
-    burger.updateOne(condition, function(result) {
+    burger.updateOne({id}, function(result) {
         if (result.changedRows === 0) {
             return res.status(404).end();
         }

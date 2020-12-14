@@ -1,3 +1,4 @@
+console.log("Testing")
 $(function() {
 
     $(".devour-butt").on("click", function(event) {
@@ -10,15 +11,16 @@ $(function() {
 
                 location.reload();
             }
-        ).catch(err => {if (err) throw err});
+        )
     })
 
     $(".burg-form").on("submit", function(event) {
         event.preventDefault();
 
         var newBurger = {
-            burger_name: $("#burg-name").val.trim()
+            burger_name: $("#burg-name").val().trim()
         };
+        console.log(newBurger);
 
         $.ajax("/api/burgers", {
             type: "POST",
