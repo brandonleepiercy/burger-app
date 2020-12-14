@@ -25,7 +25,7 @@ This app allows a user to create a burger, and then eat the burger. The app util
 
 ## Usage
 
-Eating burgers
+Eating burgers, demonstrating a fully functioning app created following the MVC paradigm.
 
 ## Credits
 
