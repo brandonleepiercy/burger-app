@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row" id="burger-row">
     <div class = "col-md-6">
         <h2>Soon To Be Devoured Burgers!</h2>
         <ul>
@@ -22,15 +22,16 @@
     </div>
 </div>
 
-<div id="newburg">
-  <h2>Order a New Burger</h2>
-  <form class="burg-form">
+<div class="row d-flex justify-content-center" id="newburg">
+    <div class="col-sm-6" id="order-col">
+        <h2>Order a New Burger</h2>
+        <form class="burg-form">
+            <div class="form-group">
+            <label for="burg-name">Burger Name:</label>
+            <input type="text" id="burg-name" name="name">
+            </div>
 
-    <div class="form-group">
-      <label for="burg-name">Burger Name:</label>
-      <input type="text" id="burg-name" name="name">
+            <button type="submit" id="submit-button">order it.</button>
+        </form>
     </div>
-
-    <button type="submit" id="submit-button">order it.</button>
-  </form>
 </div>
